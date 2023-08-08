@@ -1,0 +1,103 @@
+.banner {
+    position: absolute;
+    top: 100px;
+    
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 10%;
+    width: 100%;
+    padding-right: 500px;
+
+}
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    color: #FFF;
+    margin-top: 50px;
+}
+
+.content--title {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    color: #AAA;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+
+
+
+.content--button {
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin-top: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+
+
+:root {
+    --colorBackground: #040305;
+    --colorYellow: #FFFF32;
+    --colorGrey: rgb(87,87,87);
+}
+
+.content--anim {
+    font-size: 4em;
+    /* background: var(--colorBackground); */
+    color: var(--colorGrey);
+    text-transform: lowercase;
+    font-weight: 800;
+}
+
+.paragraph {
+    width: 800px;
+    text-align: start;
+    padding-top: 25px;
+    font-weight: 300;
+}
+
+.content--anim span {
+    animation: brilho 2s ease-in-out infinite;
+    font-size: 6rem;
+}
+
+.content--anim span:nth-of-type(2) {
+    animation-delay: .25s;
+}
+.content--anim span:nth-of-type(3) {
+    animation-delay: .50s;
+}
+.content--anim span:nth-of-type(4) {
+    animation-delay: .75s;
+}
+.content--anim span:nth-of-type(5) {
+    animation-delay: 1s;
+}
+.content--anim span:nth-of-type(6) {
+    animation-delay: 1.25s;
+}
+.content--anim span:nth-of-type(7) {
+    animation-delay: 1.50s;
+}
+
+@keyframes brilho {
+    0% {
+        color: #FFF;
+        text-shadow: 
+            0 0 12px var(--colorYellow),
+            0 0 50px var(--colorYellow),
+            0 0 100px var(--colorYellow);
+    }
+    10%, 90% {
+        color: var(--colorGrey);
+        text-shadow: none;
+    }
+}

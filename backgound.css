@@ -1,0 +1,67 @@
+.scene{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(ellipse at center, #041636 0%, black 100%);
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+    padding-right: 18%;
+    padding-bottom: 200px;
+    align-items: center;
+}
+
+.scene i{
+    position: absolute;
+    top: -250px;
+    background: rgba(255, 255, 255, 0.133);
+    animation: animateStars linear infinite;
+}
+@keyframes animateStars {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(200vh);
+    }
+}
+
+.scene .rocket img {
+    width: 80px;
+}
+
+.scene .rocket{
+    position: relative;
+    animation: animate 0.2s ease infinite;
+}
+@keyframes animate {
+        0%,100%{
+            transform: translateY(-1px);
+        }
+        50%{
+            transform: translateY(2px);
+        }
+
+}
+.scene .rocket::before{
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 200px;
+    background: linear-gradient(#FFFF43,transparent);
+}
+
+.scene .rocket::after{
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 200px;
+    background: linear-gradient(#FFFF43,transparent);
+    filter: blur(20px);
+}
